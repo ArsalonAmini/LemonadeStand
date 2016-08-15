@@ -43,8 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GamePlay\Abstract Classes\PriceChanceOfBuying.cs" />
-    <Compile Include="GamePlay\Abstract Classes\WeatherChanceOfBuying.cs" />
+    <Compile Include="Customers\CustomerFleet.cs" />
     <Compile Include="GamePlay\Customer.cs" />
     <Compile Include="GamePlay\Day.cs" />
     <Compile Include="GamePlay\LemonadeStand.cs" />
