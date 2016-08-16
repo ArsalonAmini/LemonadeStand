@@ -11,8 +11,20 @@ namespace LemonadeStand
         //member variables - store (object), Lemon (object), Sugar (object), Ice (object), (lemons/sugar/ice variable values from Store class)
         //member methods - getInventory, getLemon, getSugar, getIce, 
     }
-    public int GetLemon()
-    { }
+
+
+    
+
+    public int GetInventory() //Method for purchasing inventory
+    {
+        inventory =
+        Console.WriteLine("Your account contains {0} in which to purchase supplies", Player.getBalance());
+    }
+
+    public int GetLemon() //when player runs this method, needs to take in a function that reduces player budget
+    {
+
+    }
     public int GetSugar()
     { }
     public int GetIce()

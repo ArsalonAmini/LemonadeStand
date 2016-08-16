@@ -8,28 +8,24 @@ namespace LemonadeStand
 {
     class Player
     {
-        //member variables - budget, profit
-        //member methods - BuyLemons (), BuySugar, BuyIce()
-       
-    //    public string name;
-    //    public int budget;
-    //    public int profit;
-    //}
-   
+        private string name;
+        private LemonadeStand lemonadeStand;
 
-   
-    //public int GetBalance()
-    //{
-        
-    //    getBalance = 
-    //}
-    //public void GetBudget()
-    //{
-    //    Console.WriteLine("Your account contains {0} in which to purchase supplies", Player.getBalance());
-    //}
-//    public int Profit ()
-//        {
-//            Console.WriteLine("You're profits are {0}", Player.Profit);
-//            Profit = 
-//        }
-//}
+        //Member Variables
+
+        public Player() //constructor
+        {
+            this.lemonadeStand = new LemonadeStand();
+        }
+
+        public string SetName() //Method for storing/getting name
+        {
+            Console.WriteLine("Enter your prefered name of choice:");
+            name = Console.ReadLine();
+        }
+        public void RunStand()
+        {
+            lemonadeStand.SetPrice();
+        }
+
+    }
