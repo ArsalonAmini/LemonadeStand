@@ -8,21 +8,22 @@ namespace LemonadeStand
 {
     class Day
     {
-       Weather weather;
-       Customer customer;
-        
+        Weather weather;
+        Customer customer;
+
         public Day(Weather weather, Customer customer) //constructor
         {
             this.weather = weather;
             this.customer = customer;
         }
-       
-        public void TakeInInventory (Inventory inventory)
+
+        public void TakeInInventory(Inventory inventory)
         {
             //inventory object
+            Console.WriteLine("You have {0} lemons, {1} Sugars, {2} ice remaining", inventory.TakeInLemon, inventory.TakeInSugar, inventory.TakeInIce);
         }
 
-        public void TakeInCustomer (Customer customer)
+        public void TakeInCustomer(Customer customer)
         {
             //customer object
         }
@@ -32,7 +33,7 @@ namespace LemonadeStand
             //LemonadeStand object
         }
 
-        public void TakeInDemand(Demand demand)
+        public void TakeInDemand(GamePlay.Demand demand)
         {
             //Demand method
         }
@@ -41,6 +42,14 @@ namespace LemonadeStand
         {
             //weather object
         }
+
+        private void TakeInGame (Game game) //pass in the game class 
+        {
+            //call the day method in game
+            //game.day
+        }
+    }
+
 }
         
 

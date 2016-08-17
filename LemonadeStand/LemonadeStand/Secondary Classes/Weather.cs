@@ -11,33 +11,28 @@ namespace LemonadeStand
         //member variables - getTemp, rain, sunshine, actualWeather, predictedWeather
         //member methods - GetTemp(), GetRain(), GetSunshine(), ActualWeather(), PredictedWeather() //Data sent back to customer class for logic processing
 
-        int getTemp;
-        string rain;
-        string sunshine;
-        int weather;
+       
         public Weather() //Constructor 
         {
+            //constructor
         }
 
-        public void TakeInCustomer(Customer customer)
+        public void ActOnCustomer (Customer customer)
         {
             //customer method
         }
 
-        public void TakeInDemand(Demand demand)
+        public void ActOnDemand (Demand demand)
         {
             //demand method
         }
 
-        public void TakeInDay(Day day)
+        public void ActOnDay (Day day)
         {
             //day method
         }
 
-        public void TakeInLemonadeStand (LemonadeStand lemonade)
-        {
-            //lemonadeStandObject
-        }
+       
 
 
 

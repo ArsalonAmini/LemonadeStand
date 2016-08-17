@@ -23,25 +23,43 @@ namespace LemonadeStand
             //demand object 
         }
 
-        public void TakeInCashBox(GamePlay.CashBox cashBox)
+        public void ActOnCashBox(GamePlay.CashBox cashBox)
         {
             //cashbox method 
+            //cashbox.
         }
 
-        public void TakeInRecipe (Recipe recipe)
+        public void ActOnRecipe (Tertiary_Classes.Recipe recipe)
         {
-            //Recipe method
+            //Recipe method //return recipe to inventory, lemonadestand
+            Console.WriteLine("How many lemons in your lemonade? (Enter integer number of lemons)");
+            Console.ReadLine();
+            Console.WriteLine("How sweet of a lemonade? (Enter integer number of sugars)");
+            Console.ReadLine();
+            Console.WriteLine("How cool of a lemonade? (Enter integer number of ice cubes)");
         }
-        
-        //public int ChooseLemonade()
-        //{
-        //    Console.WriteLine("How many lemons in your lemonade? (Enter integer number of lemons)");
-        //    Console.ReadLine();
-        //    Console.WriteLine("How sweet of a lemonade? (Enter integer number of sugars)");
-        //    Console.ReadLine();
-        //    Console.WriteLine("How cool of a lemonade? (Enter integer number of ice cubes)");
-        //}
 
-    }
+        
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
 
 }

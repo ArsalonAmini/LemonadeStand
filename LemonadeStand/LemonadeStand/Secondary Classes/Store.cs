@@ -8,38 +8,46 @@ namespace LemonadeStand
 {
     class Store
     {
+        int result;
 
         public Store()
         {
             //constructor
-        }
 
+        }
 
         //methods for taking in the player class 
         public void SellLemons (Player player) //method for taking in the player object 
         {
             Console.WriteLine("How many lemons?:");
+            //result = Console.ReadLine();
+            //return result;
             //player.RecieveCashBox.subtract(quantity * price);
         }
 
-        public void SellSugar (Player player) //method for taking in the player object 
+        public int SellSugar (Player player) //method for taking in the player object 
         {
-            Console.WriteLine("How many Sugars?:");
+            //Console.WriteLine("How many Sugars?:");
+            //result = Console.ReadLine();
+            //return result;
             //player.RecieveCashBox.subtract(quantity * price);
         }
-
 
         public void SellIce (Player player) //method for taking in the player object 
         {
             Console.WriteLine("How many Ices?:");
-            //player.RecieveCashBox.subtract(quantity * price);
+            //result = Console.ReadLine();
+            //return result;
+            //player.TakeInCashBox.GiveMoneyToStore(quantity * price);
         }
 
-
         //methods for taking in other objects
-        public void CheckOut (Cashbox cashbox) //method for taking in the cashbox object
+        public void CheckOut (Cashbox cashbox, Player player) //method for taking in the cashbox object
         {
-            cashbox.PlayerCheckOut();
+
+            //cashbox.GiveMoneyToStore();
+            //player.TakeInCashBox.GiveMoneyToStore(quantity * price);
+            
         }
 
         public void TakeInInventory(Inventory inventory)

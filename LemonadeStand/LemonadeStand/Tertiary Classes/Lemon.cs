@@ -14,7 +14,7 @@ namespace LemonadeStand.Secondary_Classes
         }
         public void FirstMethod()
         {
-            //somemethod
+            //somemething
         }
     }
 }

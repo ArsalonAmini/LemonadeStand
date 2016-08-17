@@ -13,6 +13,13 @@ namespace LemonadeStand
             //constructor
         }
 
+        public void GetInventoryStatus(Player player)
+        {
+
+            //Console.WriteLine("Lemons:", player.BuyLemons);
+            //Console.WriteLine("Sugar:", player.BuySugar);
+            //Console.WriteLine("Ice", player.BuyIce);
+        }
         public void TakeInRecipe(Tertiary_Classes.Recipe recipe)
         {
             //recipe object

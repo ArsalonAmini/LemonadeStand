@@ -23,11 +23,12 @@ namespace LemonadeStand.GamePlay
             //weather object
         }
 
-        public void ActOneCustomer(Customer customer)
+        public void ActOnCustomer(Customer customer)
         {
             //customer method
         }
 
+        private void 
 
     //    public int CalculatePriceChanceOfBuying() //Method
     //    {
