@@ -12,7 +12,12 @@ namespace LemonadeStand
         {
             //constructor
         }
-        public void GetInventoryStatus(Player player)
+
+        public void GetInventory(Day day)
+        {
+            //
+        }
+        public void PrintInventoryStatus(Player player)
         {
 
             //Console.WriteLine("Lemons:", player.BuyLemons);

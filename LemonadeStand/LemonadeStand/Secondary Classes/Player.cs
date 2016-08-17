@@ -19,6 +19,10 @@ namespace LemonadeStand
             this.cashBox = new CashBox();
         }
 
+        public void SetLemonadePrice(Price price)
+        {
+            //
+        }
         public void TakeInCashbox(CashBox cashbox)
         {
             //cashBox Object //call CashBox reciprocal method (player method)

@@ -15,7 +15,10 @@ namespace LemonadeStand
             Console.WriteLine("Enter an integer value cooresponding to today's selling price");
             setPrice = Convert.ToInt32(Console.ReadLine()); //convert userInput string to integer
         }
-
+        public void GetPrice()
+        {
+            //
+        }
 
     }
 }

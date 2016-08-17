@@ -21,7 +21,7 @@ namespace LemonadeStand
                 //subtract playercheckout local variable from cashbox member variable
         }
 
-        public void GetPlayerMoney (Player player)
+        public void PrintPlayerMoney (Player player)
         {
             //a method for calculating player cash pot 
             //playerMoney - BuyInventory + CustomerRecipe //membervariable playermoney subtract playerbuyinventory + CustomerRecipe

@@ -23,7 +23,7 @@ namespace LemonadeStand
             //weather object
         }
 
-        public void ActOnCustomer(Customer customer)
+        public void CalculateBuyerChance (Customer customer)
         {
             //customer method
         }

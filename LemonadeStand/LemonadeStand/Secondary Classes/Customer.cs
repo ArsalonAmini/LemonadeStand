@@ -29,7 +29,7 @@ namespace LemonadeStand
             //cashbox.
         }
 
-        public void ActOnRecipe (Tertiary_Classes.Recipe recipe)
+        public void GetLemonadeRecipe (Tertiary_Classes.Recipe recipe)
         {
             //Recipe method //return recipe to inventory, lemonadestand
             Console.WriteLine("How many lemons in your lemonade? (Enter integer number of lemons)");

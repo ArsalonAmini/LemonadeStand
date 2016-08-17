@@ -14,6 +14,12 @@ namespace LemonadeStand.Tertiary_Classes
             //constructor
         }
 
+        public void AddPlayerMoney(CashBox cashBox)
+        { 
+            //
+        }
+
+
         public void TakeInLemon(Secondary_Classes.Lemon lemon)
         {
             //lemon object

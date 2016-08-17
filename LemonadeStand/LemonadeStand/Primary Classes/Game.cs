@@ -13,6 +13,11 @@ namespace LemonadeStand
         Customer customer = new Customer();
         Day day = new Day();
         Store store = new Store();
+        Inventory inventory = new Inventory();
+        CashBox cashBox = new CashBox();
+        Price price = new Price();
+        Demand demand = new Demand();
+        Tertiary_Classes.Recipe recipe = new Tertiary_Classes.Recipe();
         int numberOfDays;
 
         public void NewGame()
@@ -30,28 +35,28 @@ namespace LemonadeStand
 
             while (numberOfDays < 7)
             {
-                //Inventory.GetStatus(player) //InventoryActsOnPlayer
-                //CashBox.GetPlayerMoney (player) //CashBoxActsOnPlayer
-                //Store.SellLemons(player) //StoreActsOnPlayer
-                //Store.SellSugar(player) //StoreActsOnPlayer
-                //Store.SellIce(player) //StoreActsOnPlayer
-                //Player.BuyLemons(store) //PlayerActsOnStore
-                //Player.BuySugar(store) //PlayerActsOnStore
-                //Player.BuyIce(store) //PlayerActsOnStore
-                //Inventory.GetInventoryStatus(player) //InventoryActsOnPlayer(GetInventory)
-                //Player.SetPrice(price)  //PlayerActsOnPrice 
-                //Weather.GetDay(day) //WeatherActsOnDay
-                //Day.GetWeather(demand) //DayActsOnDemand
-                //Day.GetWeather(weather) //weatherActsOnDay
-                //Price.GetPrice(demand) //PriceActsOnDemand
-                //Demand.GetBuyerChance (customer) //DemandActsOnCustomer
-                //Customer.GetLemonadeRecipe (recipe) //CustomerActsOnRecipe
-                //Recipe.SubtractRecipefromInventory(lemonadeStand) //RecipeActsOnLemonadeStand
-                //Recipe.AddPlayerMoney (cashbox) //RecipeActsOnCashBox
-                //LemonadeStand.SubtractInventoryLemonadeStand(Inventory) //LemonadeStandActsOnInventory 
-                //Inventory.GetInventory(day)  //InventoryActsOnDay 
-                //Day.GetDay(player) //DayActsOnPlayer
-                //numberOfDays++;
+                inventory.PrintInventoryStatus(player); //InventoryActsOnPlayer
+                cashBox.PrintPlayerMoney(player); //CashBoxActsOnPlayer
+                store.SellLemons(player); //StoreActsOnPlayer
+                store.SellSugar(player); //StoreActsOnPlayer
+                store.SellIce(player); //StoreActsOnPlayer
+                player.BuyLemons(store); //PlayerActsOnStore
+                player.BuySugar(store); //PlayerActsOnStore
+                player.BuyIce(store); //PlayerActsOnStore
+                inventory.PrintInventoryStatus(player); //InventoryActsOnPlayer(GetInventory)
+                player.SetLemonadePrice(price);  //PlayerActsOnPrice 
+                weather.GetDay(day); //WeatherActsOnDay
+                day.CalculateDemand(demand); //DayActsOnDemand
+                day.GetWeather(weather); //weatherActsOnDay
+                //price.SetPrice(demand); //PriceActsOnDemand
+                demand.CalculateBuyerChance(customer); //DemandActsOnCustomer
+                //customer.GetLemonadeRecipe(recipe); //CustomerActsOnRecipe
+                //recipe.SubtractRecipefromInventory(lemonadeStand); //RecipeActsOnLemonadeStand
+                recipe.AddPlayerMoney(cashBox); //RecipeActsOnCashBox
+                //LemonadeStand.SubtractInventoryLemonadeStand(Inventory); //LemonadeStandActsOnInventory 
+                inventory.GetInventory(day);  //InventoryActsOnDay 
+                day.GetDay(player); //DayActsOnPlayer
+                numberOfDays++;
             }
         }
 

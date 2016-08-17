@@ -16,9 +16,19 @@ namespace LemonadeStand
             //constructor
         }
         
-        public void TakeInWeather(Weather weather)
+        public void GetWeather (Weather weather)
         {
             //weather object
+        }
+
+        public void GetDay(Player player)
+        {
+            //
+        }
+
+        public void CalculateDemand(Demand demand)
+        {
+            //
         }
     }
 

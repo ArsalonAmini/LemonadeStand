@@ -33,7 +33,7 @@ namespace LemonadeStand
             //demand method
         }
 
-        public void ActOnDay(Day day)
+        public void GetDay (Day day)
         {
             //day method
         }
