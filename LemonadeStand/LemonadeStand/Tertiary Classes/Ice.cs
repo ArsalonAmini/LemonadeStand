@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand.Tertiary_Classes
 {
-    class Ice
+    public class Ice
     {
         public Ice()
         {

@@ -40,7 +40,9 @@ namespace LemonadeStand
                 //Player.BuyIce(store) //PlayerActsOnStore
                 //Inventory.GetInventoryStatus(player) //InventoryActsOnPlayer(GetInventory)
                 //Player.SetPrice(price)  //PlayerActsOnPrice 
-                //Weather.GetWeather(demand) //WeatherActsOnDemand
+                //Weather.GetDay(day) //WeatherActsOnDay
+                //Day.GetWeather(demand) //DayActsOnDemand
+                //Day.GetWeather(weather) //weatherActsOnDay
                 //Price.GetPrice(demand) //PriceActsOnDemand
                 //Demand.GetBuyerChance (customer) //DemandActsOnCustomer
                 //Customer.GetLemonadeRecipe (recipe) //CustomerActsOnRecipe
@@ -51,26 +53,9 @@ namespace LemonadeStand
                 //Day.GetDay(player) //DayActsOnPlayer
                 //numberOfDays++;
             }
-
-
-            //sell items to player
-            store.SellLemons(player);
-           /* store.AddLemonToInventory(player)*/;
-            store.SellSugar(player);
-            //store.AddSugarToInventory(player);
-            store.SellIce(player);
-            //store.AddIceToInventory(player);
         }
 
-        //public int GetStatus() //Method for assigning "score/budget"
-        //{
-        //    numberCounter = 0;
-        //    while (numberCounter < 100)
-        //    {
-        //        numberCounter++
-        //                Console.WriteLine("Your present balance is {0}", numberCounter);
-        //    }
-        //}
+    }
 }
 
 
@@ -86,25 +71,6 @@ namespace LemonadeStand
 
 
 
-    //public void Game() //constructor
-    //{
-    //    this.playerOne = new Player();
-    //    this.playerTwo = new Player();
-    //    this.numberOfDays = 7;
-    //    this.day = 0;
-    //}
+    
 
-    //public void RunGame()
-    //{
-    //    Console.WriteLine("Welcome to my LemonadeStand Game");
-    //    while (this.day <this.numberOfDays) //Gaming Loop
-    //    {
 
-    //        Console.WriteLine("Welcome to day {0}", this.day);
-    //        LemonadeStand lemonadeStand = new LemonadeStand();
-    //        lemonadeStand.RunStand();
-    //        this.day++;
-    //    }
-    //}
-
-}

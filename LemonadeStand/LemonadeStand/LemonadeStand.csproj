@@ -52,7 +52,7 @@
     <Compile Include="Tertiary Classes\Recipe.cs" />
     <Compile Include="Tertiary Classes\Sugar.cs" />
     <Compile Include="Tertiary Classes\Demand.cs" />
-    <Compile Include="Tertiary Classes\LemonadeStand.cs" />
+    <Compile Include="Secondary Classes\LemonadeStandClass.cs" />
     <Compile Include="Quaternary Classes\Price.cs" />
     <Compile Include="Bonus Classes\FileReader.cs" />
     <Compile Include="Bonus Classes\FileWriter.cs" />

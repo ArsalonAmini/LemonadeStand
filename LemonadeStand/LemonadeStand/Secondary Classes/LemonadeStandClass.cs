@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LemonadeStand.GamePlay
+namespace LemonadeStand
 {
-    class LemonadeStand
+    public class LemonadeStandClass
     {
         int predictedWeather; //Member Variables
         int setPrice;
 
-        public LemonadeStand() //constructor
+        public LemonadeStandClass () //constructor
         {
             CashBox cashbox = new CashBox();
             Inventory inventory = new Inventory();
@@ -36,5 +36,6 @@ namespace LemonadeStand.GamePlay
         {
             //Recipe Object
         }
+       
     }
 }

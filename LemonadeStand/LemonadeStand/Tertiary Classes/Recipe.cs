@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand.Tertiary_Classes
 {
-    class Recipe
+    public class Recipe
     {
 
         public Recipe()

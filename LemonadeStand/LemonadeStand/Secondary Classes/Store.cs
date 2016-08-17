@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Store
+    public class Store
     {
         int result;
 
@@ -25,9 +25,9 @@ namespace LemonadeStand
             //player.RecieveCashBox.subtract(quantity * price);
         }
 
-        public int SellSugar (Player player) //method for taking in the player object 
+        public void SellSugar (Player player) //method for taking in the player object 
         {
-            //Console.WriteLine("How many Sugars?:");
+            Console.WriteLine("How many Sugars?:");
             //result = Console.ReadLine();
             //return result;
             //player.RecieveCashBox.subtract(quantity * price);
@@ -42,7 +42,7 @@ namespace LemonadeStand
         }
 
         //methods for taking in other objects
-        public void CheckOut (Cashbox cashbox, Player player) //method for taking in the cashbox object
+        public void CheckOut (CashBox cashBox, Player player) //method for taking in the cashbox object
         {
 
             //cashbox.GiveMoneyToStore();

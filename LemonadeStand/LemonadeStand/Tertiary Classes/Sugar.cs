@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand.Secondary_Classes
 {
-    class Sugar
+    public class Sugar
     {
         public Sugar()
         {
@@ -19,3 +19,5 @@ namespace LemonadeStand.Secondary_Classes
         }
 
     }
+
+}

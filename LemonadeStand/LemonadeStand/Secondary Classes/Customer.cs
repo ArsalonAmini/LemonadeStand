@@ -18,12 +18,12 @@ namespace LemonadeStand
             //constructor
         }
 
-        public void TakeInDemand (GamePlay.Demand demand)
+        public void TakeInDemand (Demand demand)
         {
             //demand object 
         }
 
-        public void ActOnCashBox(GamePlay.CashBox cashBox)
+        public void ActOnCashBox(CashBox cashBox)
         {
             //cashbox method 
             //cashbox.

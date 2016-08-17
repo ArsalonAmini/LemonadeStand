@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand.Secondary_Classes
 {
-    class CustomerFleet
+    public class CustomerFleet
     {
+        private List<Customer> customer;
+        private int numberOfRobots;
+
         public List<Customer> CreateCustomers(int numberOfCustomers)
         {
             Random rand = new Random();
             List<Customer> robots = new List<Customer>();
             for (int i = 0; i < numberOfRobots; i++)
             {
-                Customer customer = new Customer("Customer" + i, rand.Next(0, 4));
-                customer.Add(Customer);
+                //Customer customer = new Customer("Customer" + i, rand.Next(0, 4));
+                //customer.Add(Customer);
             }
             return customer;
         }

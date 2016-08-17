@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand.Secondary_Classes
 {
-    class Lemon
+    public class Lemon
     {
         public Lemon()
         {

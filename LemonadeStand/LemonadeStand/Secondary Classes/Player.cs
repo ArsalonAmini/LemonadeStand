@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    class Player
+    public class Player
     {
-        private Cashbox cashbox;
-        private LemonadeStand lemonadeStand;
+        private CashBox cashBox;
+        private LemonadeStandClass lemonadeStand;
 
         //Member Variables
 
         public Player() //constructor
         {
-            this.lemonadeStand = new LemonadeStand();
-            this.cashbox = new Cashbox();
+            this.lemonadeStand = new LemonadeStandClass();
+            this.cashBox = new CashBox();
         }
 
-        public void TakeInCashbox(GamePlay.CashBox cashbox)
+        public void TakeInCashbox(CashBox cashbox)
         {
             //cashBox Object //call CashBox reciprocal method (player method)
             //cashbox.GetPlayerBalance();

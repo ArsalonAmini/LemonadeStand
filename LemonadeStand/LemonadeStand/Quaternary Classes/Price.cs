@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LemonadeStand.GamePlay
+namespace LemonadeStand
 {
-    class Price
+    public class Price
     {
+        private object setPrice;
+
         public void SetPrice() //Method for setting the price of the day
         {
             Console.WriteLine("Enter an integer value cooresponding to today's selling price");
-            setPrice = parse.Int32(Console.ReadLine()); //convert userInput string to integer
+            setPrice = Convert.ToInt32(Console.ReadLine()); //convert userInput string to integer
         }
 
 
