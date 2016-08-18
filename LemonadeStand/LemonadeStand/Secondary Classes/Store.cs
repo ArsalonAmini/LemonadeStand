@@ -13,31 +13,37 @@ namespace LemonadeStand
         public Store()
         {
             //constructor
+            Inventory inventory = new Inventory();
 
+        }
+        public void TakeInInventory(Inventory inventory)
+        {
+            //inventory.AddStorePurchaseToInventory();
         }
 
         //methods for taking in the player class 
-        public void SellLemons (Player player) //method for taking in the player object 
+        public int SellLemons (Player player) //method for taking in the player object 
         {
+            Console.WriteLine("Welcome to your store, you can buy items here, specify the quantity of inventory");
             Console.WriteLine("How many lemons?:");
-            //result = Console.ReadLine();
-            //return result;
+            result = Convert.ToInt32(Console.ReadLine());
+            return result;
             //player.RecieveCashBox.subtract(quantity * price);
         }
 
-        public void SellSugar (Player player) //method for taking in the player object 
+        public int SellSugar (Player player) //method for taking in the player object 
         {
             Console.WriteLine("How many Sugars?:");
-            //result = Console.ReadLine();
-            //return result;
+            result = Convert.ToInt32(Console.ReadLine());
+            return result;
             //player.RecieveCashBox.subtract(quantity * price);
         }
 
-        public void SellIce (Player player) //method for taking in the player object 
+        public int SellIce (Player player) //method for taking in the player object 
         {
             Console.WriteLine("How many Ices?:");
-            //result = Console.ReadLine();
-            //return result;
+            result = Convert.ToInt32(Console.ReadLine());
+            return result;
             //player.TakeInCashBox.GiveMoneyToStore(quantity * price);
         }
 
@@ -50,10 +56,6 @@ namespace LemonadeStand
             
         }
 
-        public void TakeInInventory(Inventory inventory)
-        {
-
-        }
         
         public void TakeInLemon (Secondary_Classes.Lemon lemon)
         {

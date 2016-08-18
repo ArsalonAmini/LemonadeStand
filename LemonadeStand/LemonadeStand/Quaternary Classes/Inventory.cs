@@ -8,27 +8,51 @@ namespace LemonadeStand
 {
     public class Inventory
     {
+
+        int lemons;
+        int sugar;
+        int ice;
+
         public Inventory()
         {
             //constructor
         }
 
-        public void GetInventory(Day day)
+        public void AddStorePurchaseToInventory(Store store)
         {
             //
         }
+
+
         public void PrintInventoryStatus(Player player)
         {
 
-            //Console.WriteLine("Lemons:", player.BuyLemons);
-            //Console.WriteLine("Sugar:", player.BuySugar);
-            //Console.WriteLine("Ice", player.BuyIce);
-
-            //check inventory for 3 lemon, 1 sugar, 4 ice prior to makelemonade
-            //if there is 3 lemon, 1 sugar, 4 ice run MakeLemonade method
-            //if there is not enough lemons return "purchase more lemons" and return available money
-            //if there is not enough sugar return "purchase more sugar" and return available money
+            //Console.WriteLine("Your Inventory Contains the following item quantities");
+            //Console.WriteLine("Lemons:", inventory.PrintLemons);
+            //Console.WriteLine("Sugar:", inventory.PrintSugar);
+            //Console.WriteLine("Ice", inventory.PrintIce);
         }
+
+        public void PrintLemons(LemonadeStand lemonadestand)
+        {
+            //lemons = lemonadeStand.GetLemons
+        }
+        //public void AddInventory(CashBox cashbox, Store store)
+        //{
+        //lemons = 0;
+        //sugar = 0;
+        //ice = 0;
+
+            //while (player.Cashbox > 0, i++)
+            //{
+            //    lemonInventory = lemons + playerBuyLemons;
+            //    sugarInventory = sugar + playerBuySugar;
+            //    iceInventory = ice + playerBuyIce;
+            //    CashBox.
+            //    i++;
+            //}
+
+
         public void MakeLemonade (Tertiary_Classes.Recipe recipe)
         {
             //recipe object
@@ -55,6 +79,8 @@ namespace LemonadeStand
         {
             //ice object
         }
-
-      }
 }
+
+}
+     
+

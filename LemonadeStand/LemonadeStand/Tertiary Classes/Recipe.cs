@@ -14,24 +14,22 @@ namespace LemonadeStand.Tertiary_Classes
             //constructor
         }
 
-        public void AddPlayerMoney(CashBox cashBox)
-        { 
-            //
-        }
-
-
-        public void TakeInLemon(Secondary_Classes.Lemon lemon)
+        if (
+        public void TakeInLemonInventory(Inventory inventory)
         {
             //lemon object
         }
-        public void TakeInSugar(Secondary_Classes.Sugar sugar)
+        public void TakeInSugarInventory(Inventory inventory)
         {
-
+            //lemon object
         }
-        public void TakeInIce(Ice ice)
+
+        public void TakeInIceInventory(Inventory inventory)
         {
-
+            //lemon object
         }
+
+        
     }
 
 }

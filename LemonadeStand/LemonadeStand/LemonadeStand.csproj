@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Quaternary Classes\CashBox.cs" />
     <Compile Include="Secondary Classes\Customer.cs" />
-    <Compile Include="Secondary Classes\CustomerFleet.cs" />
     <Compile Include="Secondary Classes\Day.cs" />
     <Compile Include="Tertiary Classes\Ice.cs" />
     <Compile Include="Tertiary Classes\Lemon.cs" />

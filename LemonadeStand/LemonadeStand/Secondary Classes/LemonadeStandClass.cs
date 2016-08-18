@@ -8,13 +8,15 @@ namespace LemonadeStand
 {
     public class LemonadeStandClass
     {
-        int predictedWeather; //Member Variables
-        int setPrice;
+
+        Inventory inventory;
+        Price price;
+        Tertiary_Classes.Recipe recipe = new Tertiary_Classes.Recipe();
 
         public LemonadeStandClass () //constructor
         {
-            CashBox cashbox = new CashBox();
-            Inventory inventory = new Inventory();
+            this.inventory = new Inventory();
+           this.price = new Price();
         }
 
         public void TakeInCustomer (Customer customer) //method for taking in the customer object

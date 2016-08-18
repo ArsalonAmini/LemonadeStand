@@ -10,6 +10,9 @@ namespace LemonadeStand
     {
         private CashBox cashBox;
         private LemonadeStandClass lemonadeStand;
+        private int lemonadePrice;
+        private int boughtLemons;
+       
 
         //Member Variables
 
@@ -19,19 +22,29 @@ namespace LemonadeStand
             this.cashBox = new CashBox();
         }
 
-        public void SetLemonadePrice(Price price)
+        public void GetPlayerCashbox(CashBox cashbox)
         {
-            //
-        }
-        public void TakeInCashbox(CashBox cashbox)
-        {
-            //cashBox Object //call CashBox reciprocal method (player method)
+
+            //cashBox = cashBox.GiveMoneyToStore() + cashBox.GetMoneyFromCustomer()
+            //return cashBox;
             //cashbox.GetPlayerBalance();
         }
 
-        public void BuyLemons (Store store)
+        public int SetLemonadePrice(Price price)
         {
-            //TakeInStore object
+            Console.WriteLine("How much would you like to sell your Lemonade for today?");
+            lemonadePrice = Convert.ToInt32(Console.ReadLine());
+            return lemonadePrice;
+        }
+        
+
+        public int BuyLemons (Store store)
+        {
+            Console.WriteLine("Welcome to your store, you can buy items here, specify the quantity of inventory");
+            Console.WriteLine("How many lemons?:");
+            boughtLemons = Convert.ToInt32(Console.ReadLine());
+            return boughtLemons;
+            ////player.RecieveCashBox.subtract(quantity * price);
         }
 
         public void BuySugar(Store store)
