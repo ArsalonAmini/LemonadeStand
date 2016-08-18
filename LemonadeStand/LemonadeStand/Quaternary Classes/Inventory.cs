@@ -8,14 +8,24 @@ namespace LemonadeStand
 {
     public class Inventory
     {
-
         int lemons;
         int sugar;
         int ice;
 
-        public Inventory()
+        public Inventory ()//constructor
         {
-            //constructor
+             lemons = 1;
+             sugar = 1;
+             ice = 1;
+        }
+
+
+        public void GetInventory()
+        {
+        Console.WriteLine("The lemon inventory is: {0}", this.lemons);
+        Console.WriteLine("The sugar inventory is: {0}", this.sugar);
+        Console.WriteLine("The ice inventory is {0}", this.ice);
+        Console.ReadLine();
         }
 
         public void AddStorePurchaseToInventory(Store store)
@@ -33,7 +43,7 @@ namespace LemonadeStand
             //Console.WriteLine("Ice", inventory.PrintIce);
         }
 
-        public void PrintLemons(LemonadeStand lemonadestand)
+        public void PrintLemons(LemonadeStandClass lemonadestand)
         {
             //lemons = lemonadeStand.GetLemons
         }

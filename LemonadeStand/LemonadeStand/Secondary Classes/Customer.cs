@@ -9,7 +9,9 @@ namespace LemonadeStand
     public class Customer
     {
         Random random;
-     
+        
+       
+
         public Customer() //constructor
         {
             this.random = new Random();
@@ -38,10 +40,9 @@ namespace LemonadeStand
 
         public void BuyLemonade() //buying loop
         {
-            int buyLemonade = random.Next(0, 2)
+            int buyLemonade = random.Next(0, 2);
 
-
-                if (buyLemonade == 1)
+                if (buyLemonade == 1) 
             {
                 Console.WriteLine("Customer bought lemonade");
                 //actOnCashbox (player method)
@@ -57,6 +58,14 @@ namespace LemonadeStand
             }
         }
 
+       
+        //public void Displaycustomers(List<Customer> customerList)
+        //{
+        //    foreach (Customer customer in customerList)
+        //    {
+        //        Console.WriteLine(customer.ChooseLemonadeType + "Buy/No Buy " + customer.BuyLemonade);
+        //    }
+        //}
     }
-
 }
+

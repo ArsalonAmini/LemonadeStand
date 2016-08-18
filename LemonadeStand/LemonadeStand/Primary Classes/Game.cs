@@ -12,6 +12,8 @@ namespace LemonadeStand
         Day day = new Day();
         Store store = new Store();
         int dayCounter;
+        private int numberOfDays;
+        private int i;
 
         public void NewGame()
         {
@@ -26,11 +28,11 @@ namespace LemonadeStand
         public void RunGame()
         {
 
-            while (day <= 7) //game loop
+            while (i < 7) //game loop
             {
                 day = new Day();
                 day.RunDay();
-                dayCounter++;
+                i++;
             }
         }
 

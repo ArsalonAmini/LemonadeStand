@@ -33,20 +33,23 @@ namespace LemonadeStand
             }
         }
 
-        public void PredictWeather()
+        public void PredictWeather() 
         {
-            predictedWeather = random.Next(1, 100);
+            Random random = new Random();
+            int predictedWeather = random.Next(1, 100);
 
             if (predictedWeather > 50)
             {
                 Console.WriteLine("The predicted forcast for the next 7 days is sunny");
-
             }
             else
             {
                 Console.WriteLine("The predicted forcast for the next 7 days is raining!");
             }
         }
+
+
+
     }
 
 }

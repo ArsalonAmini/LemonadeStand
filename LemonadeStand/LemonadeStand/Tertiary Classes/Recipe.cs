@@ -14,7 +14,6 @@ namespace LemonadeStand.Tertiary_Classes
             //constructor
         }
 
-        if (
         public void TakeInLemonInventory(Inventory inventory)
         {
             //lemon object

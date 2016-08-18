@@ -10,25 +10,24 @@ namespace LemonadeStand
     {
         private CashBox cashBox;
         private LemonadeStandClass lemonadeStand;
-        private int lemonadePrice;
-        private int boughtLemons;
-       
-
-        //Member Variables
+        int lemonadePrice;
+        int boughtLemons;
+        public int cashSpent;
 
         public Player() //constructor
         {
             this.lemonadeStand = new LemonadeStandClass();
             this.cashBox = new CashBox();
         }
-
-        public void GetPlayerCashbox(CashBox cashbox)
-        {
-
-            //cashBox = cashBox.GiveMoneyToStore() + cashBox.GetMoneyFromCustomer()
-            //return cashBox;
-            //cashbox.GetPlayerBalance();
-        }
+        //public int BuyLemons(CashBox cashbox)
+        //{
+        //    Console.WriteLine("Welcome to your store, you can buy items here, specify the quantity of inventory");
+        //    Console.WriteLine("How many lemons at $1/each?:");
+        //    boughtLemons = Convert.ToInt32(Console.ReadLine());
+        //    cashSpent = (boughtLemons * 1);
+        //    cashbox.debit(cashSpent);
+        //    //player.RecieveCashBox.subtract(quantity * price);
+        //}
 
         public int SetLemonadePrice(Price price)
         {
@@ -37,16 +36,6 @@ namespace LemonadeStand
             return lemonadePrice;
         }
         
-
-        public int BuyLemons (Store store)
-        {
-            Console.WriteLine("Welcome to your store, you can buy items here, specify the quantity of inventory");
-            Console.WriteLine("How many lemons?:");
-            boughtLemons = Convert.ToInt32(Console.ReadLine());
-            return boughtLemons;
-            ////player.RecieveCashBox.subtract(quantity * price);
-        }
-
         public void BuySugar(Store store)
         {
             //TakeInStore object
@@ -56,6 +45,12 @@ namespace LemonadeStand
         {
             //TakeInStore object
         }
+        public void GetPlayerCashbox(CashBox cashbox)
+        {
 
+            //cashBox = cashBox.GiveMoneyToStore() + cashBox.GetMoneyFromCustomer()
+            //return cashBox;
+            //cashbox.GetPlayerBalance();
+        }
     }
 }
