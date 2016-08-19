@@ -25,6 +25,7 @@ namespace LemonadeStand
         Console.WriteLine("The lemon inventory is: {0}", this.lemons);
         Console.WriteLine("The sugar inventory is: {0}", this.sugar);
         Console.WriteLine("The ice inventory is {0}", this.ice);
+        Console.WriteLine("Press Enter to Continue");
         Console.ReadLine();
         }
 

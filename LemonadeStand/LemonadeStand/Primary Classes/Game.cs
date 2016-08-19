@@ -14,17 +14,19 @@ namespace LemonadeStand
         int dayCounter;
         private int numberOfDays;
         private int i;
-
+       
         public void NewGame()
         {
             Console.WriteLine("Welcome to A.Amini-Hajibashi's Lemonade Stand game");
-            Console.WriteLine("The Rules are pretty Basic, for your convienience, Player");
-            Console.WriteLine("Purchase Inventory from the Store");
-            Console.WriteLine("SellLemonade to customer");
-            Console.WriteLine("Rain or Shine try making your dime!");
+            Console.WriteLine("The Rules are pretty Basic:");
+            Console.WriteLine("Rule #1: Purchase Inventory from the Store");
+            Console.WriteLine("Rule #2: SellLemonade to customer");
+            Console.WriteLine("Press Enter to Begin a New Game!");
             Console.ReadLine();
             numberOfDays = 0;
         }
+
+
         public void RunGame()
         {
 

@@ -8,25 +8,25 @@ namespace LemonadeStand
 {
     public class CashBox 
     {
-        private int moneyFromCustomer;
-        private int balance;
+        //private double moneyFromCustomer;
+        private double balance;
        
        
 
         public CashBox()
             {
             //constructor
-            balance = 1;
+            balance = 100;
 
             }
-        public void PrintBalance()
+        public void PrintBalance() //tested and verified 8/18/2016
         {
-            Console.WriteLine("Your CashBox contains the following");
-            Console.WriteLine("You have {0} money in your cashbox", balance);
+            Console.WriteLine("Your Cashbox contains the following");
+            Console.WriteLine("You have ${0} in your cashbox", balance);
         }
 
         
-        public int Debit(int cashSpent)
+        public double Debit(double cashSpent) //tested and verified 8/18/2016
         {
             balance = balance - cashSpent;
             return balance;

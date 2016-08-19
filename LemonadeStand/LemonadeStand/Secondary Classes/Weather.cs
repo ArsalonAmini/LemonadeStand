@@ -8,8 +8,8 @@ namespace LemonadeStand
 {
     public class Weather
     {
-        private int actualWeather;
-        private int predictedWeather;
+        //private int actualWeather;
+        //private int predictedWeather;
         private int weather;
         Random random = new Random();
 
@@ -17,36 +17,47 @@ namespace LemonadeStand
         {
             //constructor
         }
-        public void ActualWeather()
+        public int ActualWeather() //Tested and verified by A Amini-Hajibashi on 8/19/2016
         {
-            actualWeather = random.Next(1, 100);
+            int actualWeather = random.Next(1, 100);
 
             if (actualWeather > 50)
             {
                 weather = 1;
+                Console.WriteLine("The Actual Weather for today is:");
                 Console.WriteLine("It's sunny");
+                return weather;
             }
             else if (actualWeather < 50)
             {
                 weather = 0;
+                Console.WriteLine("The Actual Weather for today is:");
                 Console.WriteLine("It's raining");
-            }
-        }
-
-        public void PredictWeather() 
-        {
-            Random random = new Random();
-            int predictedWeather = random.Next(1, 100);
-
-            if (predictedWeather > 50)
-            {
-                Console.WriteLine("The predicted forcast for the next 7 days is sunny");
+                return weather;
             }
             else
             {
-                Console.WriteLine("The predicted forcast for the next 7 days is raining!");
+                weather = 2;
+                Console.WriteLine("The weather is partly sunny today");
+                Console.WriteLine("The Actual Weather for today is:");
+                return weather;
             }
         }
+
+        //public void PredictWeather() //tested and verified by A Amini-Hajibashi on 8/17/2016
+        //{
+        //    Random random = new Random();
+        //    int predictedWeather = random.Next(1, 100);
+
+        //    if (predictedWeather > 50)
+        //    {
+        //        Console.WriteLine("The predicted forcast for the next 7 days is sunny");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("The predicted forcast for the next 7 days is raining!");
+        //    }
+        //}
 
 
 

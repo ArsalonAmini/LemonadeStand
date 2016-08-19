@@ -15,6 +15,8 @@ namespace LemonadeStand
         public List<Customer> potentialCustomers = new List<Customer>();
         CashBox cashBox;
         Inventory inventory;
+        Player player;
+        Random random;
 
         public Day()
         {
@@ -23,6 +25,8 @@ namespace LemonadeStand
             this.demand = new Demand();
             this.cashBox = new CashBox();
             this.inventory = new Inventory();
+            this.player = new Player();
+            this.random = new Random();
         }
 
         public void RunDay()
@@ -30,40 +34,21 @@ namespace LemonadeStand
 
             GeneratePotentialCustomers();
             cashBox.PrintBalance();
-            weather.PredictWeather();
+            this.PredictWeather();
             inventory.GetInventory();
-            //player.BuyLemons(store); //PlayerActsOnStore
-                                     
-            //player.BuySugar(store); //PlayerActsOnStore                          
-            //player.BuyIce(store); //PlayerActsOnStore                          
-            //store.SellLemons(player); //StoreActsOnPlayer                         
-            //store.SellSugar(player); //StoreActsOnPlayer
-            //store.SellIce(player); //StoreActsOnPlayer
-
+            player.BuyLemons();
+            player.BuySugar();                           
+            player.BuyIce();
+            weather.ActualWeather();
 
             //Make lemonade (customer chose recipe, rand (1,2) customer chose tart or sweet)
-            //salesLoop
+            //salesLoop //recipe.AddPlayerMoney(cashBox); //RecipeActsOnCashBox
             //Foreach potential customer do they buy or not buy
+            //recipe.SubtractRecipefromInventory(lemonadeStand); //RecipeActsOnLemonadeStand
             //endOfDay Status(money, customers, inventory)
-            //getPotentialCustomers();
             //cashBox.PrintPlayerMoney(player); //CashBoxActsOnPlayer
             //inventory.PrintInventoryStatus(player); //InventoryActsOnPlayer
 
-
-            //inventory.PrintInventoryStatus(player); //InventoryActsOnPlayer(GetInventory)
-            //player.SetLemonadePrice(price);  //PlayerActsOnPrice 
-            //weather.GetDay(day); //WeatherActsOnDay
-            //day.CalculateDemand(demand); //DayActsOnDemand
-            //day.GetWeather(weather); //weatherActsOnDay
-            //price.SetPrice(demand); //PriceActsOnDemand
-            //demand.CalculateBuyerChance(customer); //DemandActsOnCustomer
-            //customer.GetLemonadeRecipe(recipe); //CustomerActsOnRecipe
-            //recipe.SubtractRecipefromInventory(lemonadeStand); //RecipeActsOnLemonadeStand
-            //recipe.AddPlayerMoney(cashBox); //RecipeActsOnCashBox
-            //LemonadeStand.SubtractInventoryLemonadeStand(Inventory); //LemonadeStandActsOnInventory 
-            //inventory.GetInventory(day);  //InventoryActsOnDay 
-            //day.GetDay(player); //DayActsOnPlayer
-            //numberOfDays++;
         }
         public void GeneratePotentialCustomers()
         {
@@ -76,6 +61,46 @@ namespace LemonadeStand
 
             }
         }
+
+        public void PredictWeather() //tested and verified by A Amini-Hajibashi on 8/17/2016
+        {
+            Random random = new Random();
+            int predictedWeather = random.Next(1, 100);
+
+            if (predictedWeather > 50)
+            {
+                Console.WriteLine("The predicted forcast for the next 7 days is sunny");
+            }
+            else
+            {
+                Console.WriteLine("The predicted forcast for the next 7 days is raining!");
+            }
+        }
+
+        //public int ActualWeather() //Tested and verified by A Amini-Hajibashi on 8/19/2016
+        //{
+        //    int actualWeather = random.Next(1, 100);
+
+        //    if (actualWeather > 50)
+        //    {
+        //        weather = 1;
+        //        Console.WriteLine("It's sunny");
+        //        return weather;
+        //    }
+        //    else if (actualWeather < 50)
+        //    {
+        //        weather = 0;
+        //        Console.WriteLine("It's raining");
+        //        return weather;
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("The weather is partly sunny today");
+        //        weather = 2;
+        //        return weather;
+        //    }
+        //}
+
     }
 
 }

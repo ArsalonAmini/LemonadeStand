@@ -10,41 +10,56 @@ namespace LemonadeStand
     {
         private CashBox cashBox;
         private LemonadeStandClass lemonadeStand;
-        int lemonadePrice;
-        int boughtLemons;
-        public int cashSpent;
+        double lemonadePrice;
+        double boughtLemons;
+        public double cashSpent;
+        private double boughtSugar;
+        private double boughtIce;
 
         public Player() //constructor
         {
             this.lemonadeStand = new LemonadeStandClass();
             this.cashBox = new CashBox();
         }
-        //public int BuyLemons(CashBox cashbox)
-        //{
-        //    Console.WriteLine("Welcome to your store, you can buy items here, specify the quantity of inventory");
-        //    Console.WriteLine("How many lemons at $1/each?:");
-        //    boughtLemons = Convert.ToInt32(Console.ReadLine());
-        //    cashSpent = (boughtLemons * 1);
-        //    cashbox.debit(cashSpent);
-        //    //player.RecieveCashBox.subtract(quantity * price);
-        //}
 
-        public int SetLemonadePrice(Price price)
+        public double SetLemonadePrice() //Tested and verified by A Amini-Hajibashi 8/19/2016 //modifeid and retested on 8/19/2016
         {
             Console.WriteLine("How much would you like to sell your Lemonade for today?");
-            lemonadePrice = Convert.ToInt32(Console.ReadLine());
+            lemonadePrice = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Today's selling price is: ${0}", lemonadePrice);
             return lemonadePrice;
         }
-        
-        public void BuySugar(Store store)
+
+        public double BuyLemons() //Tested and verified by A Amini-Hajibashi 8/19/2016 //modified and retested to include cashbox.debit method and return statement
         {
-            //TakeInStore object
+            Console.WriteLine("How many Lemons at $1.75/each?:");
+            boughtLemons = Convert.ToDouble(Console.ReadLine());
+            cashSpent = Convert.ToDouble((boughtLemons * 0.75));
+            Console.WriteLine("You have spent:${0}", cashSpent);
+            Console.WriteLine("You have a remaining cash balance of ${0}", cashBox.Debit(cashSpent));
+            return boughtLemons;
         }
 
-        public void BuyIce(Store store)
+        public double BuySugar() //tested and verified by A Amini-Hajibashi 8/19/2016
         {
-            //TakeInStore object
+            Console.WriteLine("How many sugars at $0.75/each?:");
+            boughtSugar = Convert.ToDouble(Console.ReadLine());
+            cashSpent = Convert.ToDouble((boughtSugar * 0.75));
+            Console.WriteLine("You have spent:${0}", cashSpent);
+            Console.WriteLine("You have a remaining cash balance of ${0}", cashBox.Debit(cashSpent));
+            return boughtSugar; ;
         }
+
+        public double BuyIce() //tested and verified by A Amini-Hajibashi on 8/19/2016
+        {
+            Console.WriteLine("How many Ices at $0.10/each?:");
+            boughtIce = Convert.ToDouble(Console.ReadLine());
+            cashSpent = Convert.ToDouble((boughtIce * 0.75));
+            Console.WriteLine("You have spent:${0}", cashSpent);
+            Console.WriteLine("You have a remaining cash balance of ${0}", cashBox.Debit(cashSpent));
+            return boughtIce;
+        }
+
         public void GetPlayerCashbox(CashBox cashbox)
         {
 
@@ -54,3 +69,5 @@ namespace LemonadeStand
         }
     }
 }
+
+
