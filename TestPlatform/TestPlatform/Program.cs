@@ -4,21 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LemonadeStand
+namespace TestPlatform
 {
     class Program
     {
-
         static void Main(string[] args)
         {
-            Game game = new Game();
-            game.NewGame();
-            game.RunGame();
+            TestClass test = new TestClass();
+            test.TestFunction();
             Console.ReadLine();
         }
-
     }
 }
-
-   
-

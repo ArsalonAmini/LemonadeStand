@@ -44,7 +44,7 @@ namespace LemonadeStand
         {
             Console.WriteLine("How many sugars at $0.75/each?:");
             boughtSugar = Convert.ToDouble(Console.ReadLine());
-            cashSpent = Convert.ToDouble((boughtSugar * 0.75));
+            cashSpent = Convert.ToDouble((boughtSugar * 1.25));
             Console.WriteLine("You have spent:${0}", cashSpent);
             Console.WriteLine("You have a remaining cash balance of ${0}", cashBox.Debit(cashSpent));
             return boughtSugar; ;

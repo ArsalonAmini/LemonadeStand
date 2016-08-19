@@ -8,14 +8,15 @@ namespace LemonadeStand.Tertiary_Classes
 {
     public class Ice
     {
-        public Ice()
+        double ice;
+        public Ice() //constructor
         {
-            //constructor
+            ice = 0.95;
         }
 
-        public void FirstMethod()
+        public double GetPrice() //not tested or verifed by A.Amini-Hajibashi
         {
-            //somemethod
+            return ice;
         }
     }
 }

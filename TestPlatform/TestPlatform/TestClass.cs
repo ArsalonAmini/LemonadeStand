@@ -4,21 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LemonadeStand.Secondary_Classes
+namespace TestPlatform
 {
-    public class Lemon
+    class TestClass
     {
-
         double lemon;
-
-        public Lemon()
+        public TestClass()
         {
             //constructor
             lemon = 2.25;
         }
-        public double GetPrice() //tested and verified by A. Amini-Hajibashi on 8/19/2016
+
+        public double TestFunction()
         {
+            //put test function here
             return lemon;
         }
+
+
     }
 }

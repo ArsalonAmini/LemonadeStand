@@ -8,14 +8,16 @@ namespace LemonadeStand.Secondary_Classes
 {
     public class Sugar
     {
+        double sugar;
+
         public Sugar()
         {
-            //constructor
+            sugar = 2.25;
         }
 
-        public void FirstMethod()
+        public double GetPrice() //Not tested or verified by A.Amini-Hajibashi
         {
-            //somemething
+            return sugar;
         }
 
     }

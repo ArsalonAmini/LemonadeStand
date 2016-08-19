@@ -11,10 +11,10 @@ namespace LemonadeStand
         Player player = new Player();
         Day day = new Day();
         Store store = new Store();
-        int dayCounter;
+       
         private int numberOfDays;
         private int i;
-       
+
         public void NewGame()
         {
             Console.WriteLine("Welcome to A.Amini-Hajibashi's Lemonade Stand game");
@@ -24,6 +24,7 @@ namespace LemonadeStand
             Console.WriteLine("Press Enter to Begin a New Game!");
             Console.ReadLine();
             numberOfDays = 0;
+
         }
 
 
@@ -36,9 +37,13 @@ namespace LemonadeStand
                 day.RunDay();
                 i++;
             }
+
+
         }
 
     }
+
+    
 }
 
 
