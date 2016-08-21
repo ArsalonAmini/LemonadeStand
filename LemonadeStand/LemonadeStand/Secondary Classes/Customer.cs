@@ -9,34 +9,25 @@ namespace LemonadeStand
     public class Customer
     {
         Random random;
-        
-       
+        private int customerPreference;
 
         public Customer() //constructor
         {
             this.random = new Random();
         }
 
-        public void ChooseLemonadeType()
-        {
-            int customerChoice = random.Next(0, 2);
+       
+        //public List<Customer> AddCustomerToDailyCustomers(List<Customer> dailyCustomers, Customer customer)
+        // {
+        //     int numberOfPotentialCustomer = 100;
 
-            if (customerChoice == 1)
-            {
-                //recipe is tart (3 lemons, 1 sugar, 1 ice)
-                //recipeActOnInventory
-                //InventoryActOnPlayer
-                //PlayerActOnCashBox
-            }
-            else if (customerChoice == 2)
-            {
-                //recipe is sweet (3 lemons, 3 sugars, 1 ice)
-            }
-            else
-            {
-                //recipe is normal (3 lemons, 2 sugars, 2 ice)
-            }
-        }
+        //     for (int i = 0; i < numberOfPotentialCustomer; i++)
+        //     {
+        //         dailyCustomers.Add(customer);
+        //     }
+        //     return dailyCustomers;
+        // }
+
 
         public void BuyLemonade() //buying loop
         {

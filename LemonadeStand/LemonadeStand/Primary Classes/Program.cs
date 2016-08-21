@@ -15,8 +15,16 @@ namespace LemonadeStand
             game.NewGame();
             game.RunGame();
             Console.ReadLine();
+
+
         }
 
+          
+
+
+
+
+    
     }
 }
 

@@ -13,17 +13,17 @@ namespace LemonadeStand.Tertiary_Classes
 
 
 
-        public override MakeLemonade()
-        {
+        //public override MakeLemonade()
+        //{
            
-            //tartRecipe = 1 lemon + 0 sugar + 1 ice;
-            //associate a cashbox (cost)with this recipe;
-            //associate inventory with recipe;
-        }
+        //    //tartRecipe = 1 lemon + 0 sugar + 1 ice;
+        //    //associate a cashbox (cost)with this recipe;
+        //    //associate inventory with recipe;
+        //}
 
-        public override GetPrice()
-        {
-            price = (1 * lemon.GetPrice()) + (0 * sugar.GetPrice()) + (1 * ice.GetPrice());
-        }
+        //public override GetPrice()
+        //{
+        //    price = (1 * lemon.GetPrice()) + (0 * sugar.GetPrice()) + (1 * ice.GetPrice());
+        //}
     }
 }

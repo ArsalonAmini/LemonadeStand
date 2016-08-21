@@ -11,7 +11,7 @@ namespace LemonadeStand
         Player player = new Player();
         Day day = new Day();
         Store store = new Store();
-       
+
         private int numberOfDays;
         private int i;
 
@@ -26,7 +26,6 @@ namespace LemonadeStand
             numberOfDays = 0;
 
         }
-
 
         public void RunGame()
         {
