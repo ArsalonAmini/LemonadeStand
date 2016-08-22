@@ -52,12 +52,14 @@ namespace LemonadeStand
             player.SetSweetLemonadePrice();
             player.SetRegularLemonadePrice();
             player.SetTartLemonadePrice();
-            recipe.MakeLemonade();
-            tartRecipe.MakeLemonade();
-            sweetRecipe.MakeLemonade();
+            //recipe.MakeLemonade();
+            //tartRecipe.MakeLemonade();
+            //sweetRecipe.MakeLemonade();
             CalculateCustomerPreference(potentialCustomers);
             MakeCustomerBuyLemonade(potentialCustomers);
-
+            cashBox.AddSaleToCashBox(potentialCustomers);
+            double totalToAddToCashBox = cashBox.AddSaleToCashBox(potentialCustomers);
+            cashBox.AddTotalToCashBox(totalToAddToCashBox, cashBox);
             //salesLoop //recipe.AddPlayerMoney(cashBox); //RecipeActsOnCashBox
             //Foreach potential customer do they buy or not buy
             //recipe.SubtractRecipefromInventory(lemonadeStand); //RecipeActsOnLemonadeStand
@@ -81,9 +83,9 @@ namespace LemonadeStand
 
         }
 
-        public List<Customer> CalculateCustomerPreference(List<Customer> potentialCustomers) //verified by A.Amini-Hajibashi, built on 8/20/2016
+        public List<Customer> CalculateCustomerPreference(List<Customer> potentialCustomers) //tested/verified by A.Amini-Hajibashi, built on 8/20/2016
         {
-            foreach (Customer customer in potentialCustomers) //does this function gen a list of objects with customer preference attribute??
+            foreach (Customer customer in potentialCustomers) 
             {
                 customer.customerPreference = random.Next(1, 4);
             }
@@ -119,35 +121,6 @@ namespace LemonadeStand
                     //return potentialCustomers;
                 }
             }
-        }
-
-
-
-        public double AddSaleToCashBox(List<Customer> potentialCustomers, CashBox cashBox) //Player player) //testing by A.Amini-Hajibashi 8/22/16
-        {
-            double totalToAddToCashbox = 0;
-
-            foreach (Customer customer in potentialCustomers)
-            {
-                if (customer.customerSweet == 1)
-                {
-                    totalToAddToCashbox += cashBox.balance + 1.20; //player.lemonadePrice; 
-                }
-                else if (customer.customerTart == 1)
-                {
-                    totalToAddToCashbox += cashBox.balance + 1.05; //player.lemonadePrice;
-                }
-                else if (customer.customerRegular == 1)
-                {
-                    totalToAddToCashbox = cashBox.balance + 1.00; //player.lemonadePrice;
-                }
-                else
-                {
-                    totalToAddToCashbox = cashBox.balance;
-                }
-
-            }
-            return totalToAddToCashbox;
         }
 
 
