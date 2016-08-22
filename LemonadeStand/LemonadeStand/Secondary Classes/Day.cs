@@ -21,7 +21,8 @@ namespace LemonadeStand
         Tertiary_Classes.TartRecipe tartRecipe;
         Tertiary_Classes.SweetRecipe sweetRecipe;
         private int customerPreference;
-        private int dailyCustomerPreference;
+       
+        int numberOfPotentialCustomers = 100;
 
         public Day()
         {
@@ -40,9 +41,9 @@ namespace LemonadeStand
         public void RunDay()
         {
 
-            GeneratePotentialCustomers();
+            GeneratePotentialCustomers(numberOfPotentialCustomers);
             cashBox.PrintBalance();
-            this.PredictWeather();
+            //this.PredictWeather();
             //inventory.GetInventory();
             player.BuyLemons();
             player.BuySugar();                           
@@ -51,9 +52,9 @@ namespace LemonadeStand
             recipe.MakeLemonade();
             tartRecipe.MakeLemonade();
             sweetRecipe.MakeLemonade();
-            CalculateCustomerPreference();
+            CalculateCustomerPreference(potentialCustomers);
+            MakeCustomerBuyLemonade();
 
-            //GenerateCustomerPreference(potentialCustomers);
             //salesLoop //recipe.AddPlayerMoney(cashBox); //RecipeActsOnCashBox
             //Foreach potential customer do they buy or not buy
             //recipe.SubtractRecipefromInventory(lemonadeStand); //RecipeActsOnLemonadeStand
@@ -62,62 +63,73 @@ namespace LemonadeStand
             //inventory.PrintInventoryStatus(player); //InventoryActsOnPlayer
 
         }
-        public List<Customer> GeneratePotentialCustomers() //Verified and Tested by A Amini-Hajibashi
-        {
-            int numberOfPotentialCustomers = 100;
 
+        public List<Customer> GeneratePotentialCustomers(int numberOfPotentialCustomers) //Verified and Tested by A Amini-Hajibashi
+
+        {
+            List<Customer> potentialCustomers = new List<Customer>();
             for (int i = 0; i < numberOfPotentialCustomers; i++)
             {
                 Customer customer = new Customer();
                 potentialCustomers.Add(new Customer());
             }
             return potentialCustomers;
+
         }
 
-        public List<Customer> CalculateCustomerPreference() //Not verified by A. Amini but  built on 8/20/2016 //Sales loop
+        public List<Customer> CalculateCustomerPreference(List<Customer> potentialCustomers) //verified by A.Amini-Hajibashi, built on 8/20/2016
         {
             foreach (Customer customer in potentialCustomers)
             {
-                dailyCustomerPreference = random.Next(1, 3);
+                customerPreference = random.Next(1, 4);
+            }
+            return potentialCustomers;
+        }
 
+        public List<Customer> MakeCustomerBuyLemonade(List<Customer> potentialCustomers) //verifed by A.Amini-Hajibashi, built on 8/20/2016 
+        {
                 if (customerPreference == 1)
                 {
                     //recipe for sweet
-                    sweetRecipe.MakeLemonade();
-                    Console.WriteLine("One sweet glass of lemonade coming up!");
+                    Console.WriteLine("Customer bought sweet lemonade!");
                     return potentialCustomers;
-                }
-                else if (customerPreference == 2)
+            }
+            else if (customerPreference == 2)
                 {
                     //recipe tart
-                    tartRecipe.MakeLemonade();
-                    Console.WriteLine("One tart glass of lemonade coming up!");
+                    //tartRecipe.MakeLemonade();
+                    Console.WriteLine("Customer bought a tart lemonade!");
+                    return potentialCustomers;
+            }
+                else if(customerPreference == 3)
+                {
+                    Console.WriteLine("Customer did not buy lemonade!");
                     return potentialCustomers;
                 }
                 else
                 {
                     //recipe for normal
                     recipe.MakeLemonade();
-                    Console.WriteLine("One normal glass of lemonade coming up!");
-                    return potentialCustomers;
-                }
+                    Console.WriteLine("Customer didn't buy lemonade!");
+                return potentialCustomers;
             }
-            return potentialCustomers;
-        }
-        public void PredictWeather() //tested and verified by A Amini-Hajibashi on 8/17/2016
-        {
-            Random random = new Random();
-            int predictedWeather = random.Next(1, 100);
+            }
 
-            if (predictedWeather > 50)
-            {
-                Console.WriteLine("The predicted forcast for the next 7 days is sunny");
-            }
-            else
-            {
-                Console.WriteLine("The predicted forcast for the next 7 days is raining!");
-            }
         }
+        //public void PredictWeather() //tested and verified by A Amini-Hajibashi on 8/17/2016
+        //{
+        //    Random random = new Random();
+        //    int predictedWeather = random.Next(1, 100);
+
+        //    if (predictedWeather > 50)
+        //    {
+        //        Console.WriteLine("The predicted forcast for the next 7 days is sunny");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("The predicted forcast for the next 7 days is raining!");
+        //    }
+        //}
 
         //public int ActualWeather() //Tested and verified by A Amini-Hajibashi on 8/19/2016
         //{
@@ -143,7 +155,7 @@ namespace LemonadeStand
         //    }
         //}
 
-    }
+    
 
 }
 

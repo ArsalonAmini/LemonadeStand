@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Primary Classes\TestClass.cs" />
     <Compile Include="Quaternary Classes\CashBox.cs" />
     <Compile Include="Secondary Classes\Customer.cs" />
     <Compile Include="Secondary Classes\Day.cs" />
