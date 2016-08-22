@@ -43,23 +43,20 @@ namespace LemonadeStand
                 return weather;
             }
         }
+        public void PredictWeather() //tested and verified by A Amini-Hajibashi on 8/17/2016
+        {
+            Random random = new Random();
+            int predictedWeather = random.Next(1, 100);
 
-        //public void PredictWeather() //tested and verified by A Amini-Hajibashi on 8/17/2016
-        //{
-        //    Random random = new Random();
-        //    int predictedWeather = random.Next(1, 100);
-
-        //    if (predictedWeather > 50)
-        //    {
-        //        Console.WriteLine("The predicted forcast for the next 7 days is sunny");
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("The predicted forcast for the next 7 days is raining!");
-        //    }
-        //}
-
-
+            if (predictedWeather > 50)
+            {
+                Console.WriteLine("The predicted forcast for the next 7 days is sunny");
+            }
+            else
+            {
+                Console.WriteLine("The predicted forcast for the next 7 days is raining!");
+            }
+        }
 
     }
 

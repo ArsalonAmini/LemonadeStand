@@ -10,9 +10,6 @@ namespace LemonadeStand
     {
         Player player = new Player();
         Day day = new Day();
-        Store store = new Store();
-
-        private int numberOfDays;
         private int i;
 
         public void NewGame()
@@ -23,8 +20,6 @@ namespace LemonadeStand
             Console.WriteLine("Rule #2: SellLemonade to customer");
             Console.WriteLine("Press Enter to Begin a New Game!");
             Console.ReadLine();
-            numberOfDays = 0;
-
         }
 
         public void RunGame()
@@ -41,8 +36,6 @@ namespace LemonadeStand
         }
 
     }
-
-    
 }
 
 
@@ -58,6 +51,6 @@ namespace LemonadeStand
 
 
 
-    
+
 
 

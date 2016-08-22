@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Primary Classes\TestClass.cs" />
     <Compile Include="Quaternary Classes\CashBox.cs" />
     <Compile Include="Secondary Classes\Customer.cs" />
     <Compile Include="Secondary Classes\Day.cs" />
@@ -54,15 +53,11 @@
     <Compile Include="Tertiary Classes\Demand.cs" />
     <Compile Include="Secondary Classes\LemonadeStandClass.cs" />
     <Compile Include="Quaternary Classes\Price.cs" />
-    <Compile Include="Bonus Classes\FileReader.cs" />
-    <Compile Include="Bonus Classes\FileWriter.cs" />
     <Compile Include="Primary Classes\Game.cs" />
     <Compile Include="Quaternary Classes\Inventory.cs" />
     <Compile Include="Secondary Classes\Player.cs" />
     <Compile Include="Primary Classes\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Secondary Classes\Store.cs" />
-    <Compile Include="Bonus Classes\UserInterface.cs" />
     <Compile Include="Secondary Classes\Weather.cs" />
     <Compile Include="Tertiary Classes\SweetRecipe.cs" />
     <Compile Include="Tertiary Classes\TartRecipe.cs" />

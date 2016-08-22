@@ -43,7 +43,7 @@ namespace LemonadeStand
 
             GeneratePotentialCustomers(numberOfPotentialCustomers);
             cashBox.PrintBalance();
-            //this.PredictWeather();
+            weather.PredictWeather();
             //inventory.GetInventory();
             player.BuyLemons();
             player.BuySugar();
@@ -55,20 +55,17 @@ namespace LemonadeStand
             //recipe.MakeLemonade();
             //tartRecipe.MakeLemonade();
             //sweetRecipe.MakeLemonade();
-            CalculateCustomerPreference(potentialCustomers);
-            MakeCustomerBuyLemonade(potentialCustomers);
+            customer.CalculateCustomerPreference(potentialCustomers);
+            customer.MakeCustomerBuyLemonade(potentialCustomers);
             cashBox.AddSaleToCashBox(potentialCustomers);
             double totalToAddToCashBox = cashBox.AddSaleToCashBox(potentialCustomers);
             cashBox.AddTotalToCashBox(totalToAddToCashBox, cashBox);
-            //salesLoop //recipe.AddPlayerMoney(cashBox); //RecipeActsOnCashBox
-            //Foreach potential customer do they buy or not buy
+
             //recipe.SubtractRecipefromInventory(lemonadeStand); //RecipeActsOnLemonadeStand
             //endOfDay Status(money, customers, inventory)
             //cashBox.PrintPlayerMoney(player); //CashBoxActsOnPlayer
             //inventory.PrintInventoryStatus(player); //InventoryActsOnPlayer
-
         }
-
 
         public List<Customer> GeneratePotentialCustomers(int numberOfPotentialCustomers) //Verified and Tested by A Amini-Hajibashi
 
@@ -83,90 +80,9 @@ namespace LemonadeStand
 
         }
 
-        public List<Customer> CalculateCustomerPreference(List<Customer> potentialCustomers) //tested/verified by A.Amini-Hajibashi, built on 8/20/2016
-        {
-            foreach (Customer customer in potentialCustomers) 
-            {
-                customer.customerPreference = random.Next(1, 4);
-            }
-            return potentialCustomers;
-        }
-
-        public void MakeCustomerBuyLemonade(List<Customer> potentialCustomers) //tested and verifed by A.Amini-Hajibashi  8/22/2016
-        {
-            foreach (Customer customer in potentialCustomers)
-            {
-                if (customer.customerPreference == 1)
-                {
-                    //recipe for sweet
-                    Console.WriteLine("Customer bought sweet lemonade!");
-                    //return potentialCustomers;
-                }
-                else if (customer.customerPreference == 2)
-                {
-                    //recipe tart
-                    //tartRecipe.MakeLemonade();
-                    Console.WriteLine("Customer bought a tart lemonade!");
-                    //return potentialCustomers;
-                }
-                else if (customer.customerPreference == 3)
-                {
-                    Console.WriteLine("Customer did not buy lemonade!");
-                }
-                else
-                {
-                    //recipe for normal
-                    //recipe.MakeLemonade();
-                    Console.WriteLine("Customer didn't buy lemonade!");
-                    //return potentialCustomers;
-                }
-            }
-        }
-
-
-        //public void PredictWeather() //tested and verified by A Amini-Hajibashi on 8/17/2016
-        //{
-        //    Random random = new Random();
-        //    int predictedWeather = random.Next(1, 100);
-
-        //    if (predictedWeather > 50)
-        //    {
-        //        Console.WriteLine("The predicted forcast for the next 7 days is sunny");
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("The predicted forcast for the next 7 days is raining!");
-        //    }
-        //}
-
-        //public int ActualWeather() //Tested and verified by A Amini-Hajibashi on 8/19/2016
-        //{
-        //    int actualWeather = random.Next(1, 100);
-
-        //    if (actualWeather > 50)
-        //    {
-        //        weather = 1;
-        //        Console.WriteLine("It's sunny");
-        //        return weather;
-        //    }
-        //    else if (actualWeather < 50)
-        //    {
-        //        weather = 0;
-        //        Console.WriteLine("It's raining");
-        //        return weather;
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("The weather is partly sunny today");
-        //        weather = 2;
-        //        return weather;
-        //    }
-        //}
-
-
 
     }
-    }
+}
 
 
 

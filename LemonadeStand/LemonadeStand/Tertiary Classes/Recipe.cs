@@ -10,32 +10,20 @@ namespace LemonadeStand.Tertiary_Classes
     {
 
         Random random;
-        int customerPreference;
+     
 
         public Recipe() //Constructor
         {
-            this.random = new Random();
+            
         }
 
 
 
         public virtual void MakeLemonade()
         {
-            //lemonade recipe
-            //associate make lemonade with cashbox
-            //associate make lemonade with inventory
-            //associate make lemonade with customer
+            //Change Inventory method
         }
        
-        //public virtual GetPrice()
-        //{
-        //    //price = (1 * lemon.GetPrice()) + (0 * sugar.GetPrice()) + (1 * ice.GetPrice());
-        //}
-
-
-
-       
-
     }
   
 }

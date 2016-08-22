@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    public class CashBox 
+    public class CashBox
     {
         //private double moneyFromCustomer;
         public double balance;
-        CashBox cashBox;
         public double sweetLemonadePrice;
         public double tartLemonadePrice;
         public double regularLemonadePrice;
+        
 
         public CashBox()
-            {
+        {
             balance = 100;
-            this.cashBox = new CashBox();
-            }
+        }
+      
         public void PrintBalance() //tested and verified 8/18/2016
         {
             Console.WriteLine("Your Cashbox contains the following");
             Console.WriteLine("You have ${0} in your cashbox", balance);
         }
 
-        
+
         public double Debit(double cashSpent) //tested and verified 8/18/2016
         {
             balance = balance - cashSpent;
@@ -64,15 +64,15 @@ namespace LemonadeStand
             {
                 if (customer.customerSweet == 1)
                 {
-                    totalToAddToCashBox += this.sweetLemonadePrice; 
+                    totalToAddToCashBox += this.sweetLemonadePrice;
                 }
                 else if (customer.customerTart == 1)
                 {
-                    totalToAddToCashBox += this.sweetLemonadePrice; 
+                    totalToAddToCashBox += this.sweetLemonadePrice;
                 }
                 else if (customer.customerRegular == 1)
                 {
-                    totalToAddToCashBox += this.regularLemonadePrice; 
+                    totalToAddToCashBox += this.regularLemonadePrice;
                 }
                 else
                 {

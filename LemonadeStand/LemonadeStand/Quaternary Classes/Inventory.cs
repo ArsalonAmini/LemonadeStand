@@ -21,7 +21,6 @@ namespace LemonadeStand
             this.sugar = new Secondary_Classes.Sugar();
         }
 
-
         //public void AddStorePurchaseToInventory(Store store)
         //{
         //    //

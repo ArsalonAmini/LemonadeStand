@@ -14,7 +14,7 @@ namespace LemonadeStand.Tertiary_Classes
             ice = 0.95;
         }
 
-        public double GetPrice() //not tested or verifed by A.Amini-Hajibashi
+        public double GetPrice() 
         {
             return ice;
         }

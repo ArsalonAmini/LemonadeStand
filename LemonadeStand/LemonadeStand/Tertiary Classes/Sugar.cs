@@ -15,7 +15,7 @@ namespace LemonadeStand.Secondary_Classes
             sugar = 2.25;
         }
 
-        public double GetPrice() //Not tested or verified by A.Amini-Hajibashi
+        public double GetPrice() 
         {
             return sugar;
         }

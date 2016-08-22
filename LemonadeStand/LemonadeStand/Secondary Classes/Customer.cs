@@ -20,42 +20,49 @@ namespace LemonadeStand
             this.random = new Random();
         }
 
-       
-        public void AddSaleToCashBox(List<Customer> potentialCustomers) //tested and verified by A.Amini-Hajibashi 8/22/16
+
+        public void MakeCustomerBuyLemonade(List<Customer> potentialCustomers) //tested and verifed by A.Amini-Hajibashi  8/22/2016
         {
             foreach (Customer customer in potentialCustomers)
             {
-                if (customer.customerSweet == 1)
+                if (customer.customerPreference == 1)
                 {
-                    //balance = balance + 1.20
-                    //return balance;
-                    Console.WriteLine("it works");
+                    customer.customerSweet = 1;
+                    Console.WriteLine("Customer bought sweet lemonade!");
+                    //return potentialCustomers;
                 }
-                else if (customer.customerTart == 1)
+                else if (customer.customerPreference == 2)
                 {
-                    //balance = balance + 1.05
-                    //return balance;
-                    Console.WriteLine("it works");
+                    customer.customerTart = 1;
+                    Console.WriteLine("Customer bought a tart lemonade!");
                 }
-                else if (customer.customerRegular == 1)
+                else if (customer.customerPreference == 3)
                 {
-                    //balance = balance + 1.00
-                    //return balance;
-                    Console.WriteLine("it works");
+                    customer.customerRegular = 1;
+                    Console.WriteLine("Customer did not buy lemonade!");
                 }
                 else
                 {
-                    //balance = balance 
-                    //return balance;
-                    Console.WriteLine("it works");
+                    customer.customerRegular = 1;
+                    Console.WriteLine("Customer didn't buy lemonade!");
                 }
-
             }
+        }
 
+        public List<Customer> CalculateCustomerPreference(List<Customer> potentialCustomers) //tested & verified by A.Amini-Hajibashi on 8/20/2016
+        {
+            foreach (Customer customer in potentialCustomers)
+            {
+                customer.customerPreference = random.Next(1, 4);
+            }
+            return potentialCustomers;
         }
 
     }
-    }
+
+}
+
+
 
 
 
