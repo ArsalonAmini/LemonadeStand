@@ -27,10 +27,11 @@ namespace LemonadeStand
                 Customer customer = new Customer();
                 potentialCustomers.Add(new Customer());
             }
-            testClass.GeneratePotentialCustomers(numberOfPotentialCustomers);
-            testClass.CalculateCustomerPreference(potentialCustomers); //how to call a member variable <list> into a new function
-            testClass.MakeCustomerBuyLemonade(potentialCustomers);
-            testClass.AddSaleToCashBox(potentialCustomers, cashBox);
+            //testClass.GeneratePotentialCustomers(numberOfPotentialCustomers);
+            //testClass.CalculateCustomerPreference(potentialCustomers); //how to call a member variable <list> into a new function
+            //testClass.MakeCustomerBuyLemonade(potentialCustomers);
+            //testClass.AddSaleToCashBox(potentialCustomers, cashBox);
+            //testClass.SetTartLemonadePrice();
         }
     
     }

@@ -49,6 +49,9 @@ namespace LemonadeStand
             player.BuySugar();
             player.BuyIce();
             weather.ActualWeather();
+            player.SetSweetLemonadePrice();
+            player.SetRegularLemonadePrice();
+            player.SetTartLemonadePrice();
             recipe.MakeLemonade();
             tartRecipe.MakeLemonade();
             sweetRecipe.MakeLemonade();

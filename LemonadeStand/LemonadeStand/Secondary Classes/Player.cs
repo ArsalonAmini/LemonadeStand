@@ -10,7 +10,9 @@ namespace LemonadeStand
     {
         private CashBox cashBox;
         private LemonadeStandClass lemonadeStand;
-        public double lemonadePrice;
+        public double sweetLemonadePrice;
+        public double tartLemonadePrice;
+        public double regularLemonadePrice;
         double boughtLemons;
         public double cashSpent;
         private double boughtSugar;
@@ -22,12 +24,24 @@ namespace LemonadeStand
             this.cashBox = new CashBox();
         }
 
-        public double SetLemonadePrice() //Tested and verified by A Amini-Hajibashi 8/19/2016 //modifeid and retested on 8/19/2016
+        public double SetSweetLemonadePrice() //Tested and verified by A Amini-Hajibashi 8/22/2016
         {
-            Console.WriteLine("How much would you like to sell your Lemonade for today?");
-            lemonadePrice = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Today's selling price is: ${0}", lemonadePrice);
-            return lemonadePrice;
+            Console.WriteLine("How much would you like to sell your SweetLemonade for today?");
+            sweetLemonadePrice = Convert.ToDouble(Console.ReadLine());
+            return sweetLemonadePrice;
+        }
+        public double SetTartLemonadePrice() //Tested and verified by A Amini-Hajibashi 8/22/2016
+        {
+            Console.WriteLine("How much would you like to sell your TartLemonade for today?");
+            tartLemonadePrice = Convert.ToDouble(Console.ReadLine());
+            return tartLemonadePrice;
+        }
+
+        public double SetRegularLemonadePrice() //Tested and verified by A Amini-Hajibashi 8/22/2016
+        {
+            Console.WriteLine("How much would you like to sell your RegularLemonade for today?");
+            regularLemonadePrice = Convert.ToDouble(Console.ReadLine());
+            return regularLemonadePrice;
         }
 
         public double BuyLemons() //Tested and verified by A Amini-Hajibashi 8/19/2016 //modified and retested to include cashbox.debit method and return statement
