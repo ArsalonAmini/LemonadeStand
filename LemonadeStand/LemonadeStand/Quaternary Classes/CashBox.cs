@@ -9,14 +9,14 @@ namespace LemonadeStand
     public class CashBox 
     {
         //private double moneyFromCustomer;
-        private double balance;
+        public double balance;
        
        
 
         public CashBox()
             {
             //constructor
-            balance = 100;
+           balance = 100;
 
             }
         public void PrintBalance() //tested and verified 8/18/2016
@@ -32,6 +32,13 @@ namespace LemonadeStand
             return balance;
         }
 
+        //public int AddSaleToCashbox (Customer customer)
+        //{
+        //    //CustomerRecipe * Price Lemon + CustomerRecipe * Price 
+        //    moneyFromCustomer = Convert.ToInt32(Console.ReadLine());
+        //    return moneyFromCustomer;
+        //}
+
         //public int AddPlayerMoney(CashBox cashBox)
         //{
         //    //
@@ -39,18 +46,6 @@ namespace LemonadeStand
         //}
 
 
-        //public void GiveMoneyToStore (Store store)
-        //{
-        //    //act on store method
-        //    //return moneyToStore
-        //}
-
-        //public int GetMoneyFromCustomer (Customer customer)
-        //{
-        //    //CustomerRecipe * Price Lemon + CustomerRecipe * Price 
-        //    moneyFromCustomer = Convert.ToInt32(Console.ReadLine());
-        //    return moneyFromCustomer;
-        //}
 
     }
 }

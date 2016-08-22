@@ -11,6 +11,9 @@ namespace LemonadeStand.Primary_Classes
         Customer customer;
         Random random;
         private int customerPreference;
+        int customerSweet;
+        int customerTart;
+        int customerNormal;
 
         public TestClass()
         {
@@ -47,6 +50,7 @@ namespace LemonadeStand.Primary_Classes
                 if (customer.customerPreference == 1)
                 {
                     //recipe for sweet
+                    customer.customerSweet = 1;
                     Console.WriteLine("Customer bought sweet lemonade!");
                     //return potentialCustomers;
                 }
@@ -54,22 +58,52 @@ namespace LemonadeStand.Primary_Classes
                 {
                     //recipe tart
                     //tartRecipe.MakeLemonade();
+                    customer.customerTart = 1;
                     Console.WriteLine("Customer bought a tart lemonade!");
                     //return potentialCustomers;
                 }
                 else if (customer.customerPreference == 3)
                 {
+                    customer.customerRegular = 1;
                     Console.WriteLine("Customer did not buy lemonade!");
                 }
                 else
                 {
-                    //recipe for normal
+                    customer.customerRegular = 1;
                     //recipe.MakeLemonade();
                     Console.WriteLine("Customer didn't buy lemonade!");
                     //return potentialCustomers;
                 }
             }
         }
+
+        public double AddSaleToCashBox(List<Customer> potentialCustomers, CashBox cashBox) //Player player) //testing by A.Amini-Hajibashi 8/22/16
+        {
+            double totalToAddToCashbox = 0;
+
+            foreach (Customer customer in potentialCustomers)
+            {
+                if (customer.customerSweet == 1)
+                {
+                    totalToAddToCashbox += cashBox.balance + 1.20; //player.lemonadePrice; 
+                }
+                else if (customer.customerTart == 1)
+                {
+                    totalToAddToCashbox += cashBox.balance + 1.05; //player.lemonadePrice;
+                }
+                else if (customer.customerRegular == 1)
+                {
+                    totalToAddToCashbox = cashBox.balance + 1.00; //player.lemonadePrice;
+                }
+                else
+                {
+                    totalToAddToCashbox = cashBox.balance;
+                }
+
+            }
+            return totalToAddToCashbox;
+        }
     }
+    
   }
 

@@ -10,7 +10,7 @@ namespace LemonadeStand
     {
         private CashBox cashBox;
         private LemonadeStandClass lemonadeStand;
-        double lemonadePrice;
+        public double lemonadePrice;
         double boughtLemons;
         public double cashSpent;
         private double boughtSugar;

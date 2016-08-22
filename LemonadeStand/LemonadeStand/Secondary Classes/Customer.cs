@@ -11,24 +11,50 @@ namespace LemonadeStand
         Random random;
         public int customerPreference;
         public List<Customer> potentialCustomers;
+        public int customerSweet;
+        public int customerTart;
+        public int customerRegular;
 
         public Customer() //constructor
         {
             this.random = new Random();
         }
 
-        public List<Customer> CalculateCustomerPreference(List<Customer> potentialCustomers) //verified by A.Amini-Hajibashi, built on 8/20/2016
+       
+        public void AddSaleToCashBox(List<Customer> potentialCustomers) //tested and verified by A.Amini-Hajibashi 8/22/16
         {
-            foreach (Customer customer in potentialCustomers) 
+            foreach (Customer customer in potentialCustomers)
             {
-                customer.customerPreference = random.Next(1, 4);
+                if (customer.customerSweet == 1)
+                {
+                    //balance = balance + 1.20
+                    //return balance;
+                    Console.WriteLine("it works");
+                }
+                else if (customer.customerTart == 1)
+                {
+                    //balance = balance + 1.05
+                    //return balance;
+                    Console.WriteLine("it works");
+                }
+                else if (customer.customerRegular == 1)
+                {
+                    //balance = balance + 1.00
+                    //return balance;
+                    Console.WriteLine("it works");
+                }
+                else
+                {
+                    //balance = balance 
+                    //return balance;
+                    Console.WriteLine("it works");
+                }
+
             }
-            return potentialCustomers;
-        }
-
-        
 
         }
+
+    }
     }
 
 
