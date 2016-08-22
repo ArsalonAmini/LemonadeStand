@@ -41,7 +41,7 @@ namespace LemonadeStand
         public void RunDay()
         {
 
-            GeneratePotentialCustomers(numberOfPotentialCustomers);
+            customer.GeneratePotentialCustomers(numberOfPotentialCustomers);
             cashBox.PrintBalance();
             //this.PredictWeather();
             //inventory.GetInventory();
@@ -52,8 +52,8 @@ namespace LemonadeStand
             recipe.MakeLemonade();
             tartRecipe.MakeLemonade();
             sweetRecipe.MakeLemonade();
-            CalculateCustomerPreference(potentialCustomers);
-            MakeCustomerBuyLemonade();
+            customer.CalculateCustomerPreference(potentialCustomers);
+            customer.MakeCustomerBuyLemonade(potentialCustomers);
 
             //salesLoop //recipe.AddPlayerMoney(cashBox); //RecipeActsOnCashBox
             //Foreach potential customer do they buy or not buy
@@ -64,57 +64,7 @@ namespace LemonadeStand
 
         }
 
-        public List<Customer> GeneratePotentialCustomers(int numberOfPotentialCustomers) //Verified and Tested by A Amini-Hajibashi
-
-        {
-            List<Customer> potentialCustomers = new List<Customer>();
-            for (int i = 0; i < numberOfPotentialCustomers; i++)
-            {
-                Customer customer = new Customer();
-                potentialCustomers.Add(new Customer());
-            }
-            return potentialCustomers;
-
-        }
-
-        public List<Customer> CalculateCustomerPreference(List<Customer> potentialCustomers) //verified by A.Amini-Hajibashi, built on 8/20/2016
-        {
-            foreach (Customer customer in potentialCustomers)
-            {
-                customerPreference = random.Next(1, 4);
-            }
-            return potentialCustomers;
-        }
-
-        public List<Customer> MakeCustomerBuyLemonade(List<Customer> potentialCustomers) //verifed by A.Amini-Hajibashi, built on 8/20/2016 
-        {
-                if (customerPreference == 1)
-                {
-                    //recipe for sweet
-                    Console.WriteLine("Customer bought sweet lemonade!");
-                    return potentialCustomers;
-            }
-            else if (customerPreference == 2)
-                {
-                    //recipe tart
-                    //tartRecipe.MakeLemonade();
-                    Console.WriteLine("Customer bought a tart lemonade!");
-                    return potentialCustomers;
-            }
-                else if(customerPreference == 3)
-                {
-                    Console.WriteLine("Customer did not buy lemonade!");
-                    return potentialCustomers;
-                }
-                else
-                {
-                    //recipe for normal
-                    recipe.MakeLemonade();
-                    Console.WriteLine("Customer didn't buy lemonade!");
-                return potentialCustomers;
-            }
-            }
-
+       
         }
         //public void PredictWeather() //tested and verified by A Amini-Hajibashi on 8/17/2016
         //{

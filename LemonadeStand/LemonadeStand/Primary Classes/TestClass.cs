@@ -31,33 +31,33 @@ namespace LemonadeStand.Primary_Classes
 
         }
 
-        public List<Customer> CalculateCustomerPreference(List<Customer> potentialCustomers) //Not tested or verified by A.Amini-Hajibashi, built on 8/20/2016
+        public List<Customer> CalculateCustomerPreference(List<Customer> potentialCustomers) //verified by A.Amini-Hajibashi, built on 8/20/2016
         {
             foreach (Customer customer in potentialCustomers) //does this function gen a list of objects with customer preference attribute??
             {
-                customerPreference = random.Next(1, 4);
+                customer.customerPreference = random.Next(1, 4);
             }
             return potentialCustomers;
         }
 
-        public void MakeCustomerBuyLemonade(List<Customer> potentialCustomers) //Not tested or verifed by A.Amini-Hajibashi, built on 8/20/2016 
+        public void MakeCustomerBuyLemonade(List<Customer> potentialCustomers) //tested and verifed by A.Amini-Hajibashi  8/22/2016
         {
             foreach (Customer customer in potentialCustomers)
             {
-                if (customerPreference == 1)
+                if (customer.customerPreference == 1)
                 {
                     //recipe for sweet
                     Console.WriteLine("Customer bought sweet lemonade!");
                     //return potentialCustomers;
                 }
-                else if (customerPreference == 2)
+                else if (customer.customerPreference == 2)
                 {
                     //recipe tart
                     //tartRecipe.MakeLemonade();
                     Console.WriteLine("Customer bought a tart lemonade!");
                     //return potentialCustomers;
                 }
-                else if (customerPreference == 3)
+                else if (customer.customerPreference == 3)
                 {
                     Console.WriteLine("Customer did not buy lemonade!");
                 }
